@@ -1,0 +1,6 @@
+- first needed to get saved messages from telegram
+- searched a Python package
+- found telethon https://github.com/LonamiWebs/Telethon
+- got an api key at https://my.telegram.org/apps (https://core.telegram.org/api/obtaining_api_id)
+- wrote a quick poc
+- next: play with pypher to write into a neo4j db

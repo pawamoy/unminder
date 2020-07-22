@@ -1,0 +1,18 @@
+# Changes here will be overwritten by Copier
+_commit: 309bc30
+_src_path: https://github.com/pawamoy/copier-poetry.git
+author_email: pawamoy@pm.me
+author_fullname: "Timoth\xE9e Mazzucotelli"
+author_username: pawamoy
+copyright_date: '2020'
+copyright_holder: "Timoth\xE9e Mazzucotelli"
+copyright_holder_email: pawamoy@pm.me
+copyright_license: ISC License
+project_description: Queue things in a list, review them later.
+project_name: Unminder
+python_package_command_line_name: queue
+python_package_distribution_name: unminder
+python_package_import_name: unminder
+repository_name: unminder
+repository_namespace: pawamoy
+repository_provider: github.com
