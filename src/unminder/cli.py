@@ -15,29 +15,28 @@ import argparse
 import os
 import sys
 
-from telethon import TelegramClient, events, sync
+from telethon import TelegramClient
 
 
 def get_user_credentials():
+    """Utility function to get a user's credentials from environment variables."""
     try:
         username = os.environ["TELEGRAM_USERNAME"]
         api_id = int(os.environ["TELEGRAM_API_ID"])
         api_hash = os.environ["TELEGRAM_API_HASH"]
     except (TypeError, KeyError):
-        print("error: Please set the following environment variables:\n"
-              "TELEGRAM_USERNAME, TELEGRAM_API_ID, TELEGRAM_API_HASH", file=sys.stderr)
+        print(
+            "error: Please set the following environment variables:\n"
+            "TELEGRAM_USERNAME, TELEGRAM_API_ID, TELEGRAM_API_HASH",
+            file=sys.stderr,
+        )
         sys.exit(1)
     return username, api_id, api_hash
 
 
-def get_parser():
-    """Return the CLI argument parser."""
-    return argparse.ArgumentParser(prog="queue")
-
-
 def queue(args=None):
     """The queue command."""
-    parser = get_parser()
+    parser = argparse.ArgumentParser(prog="queue")
     opts = parser.parse_args(args=args)
     print(opts)
     return 0
@@ -45,8 +44,8 @@ def queue(args=None):
 
 def review(args=None):
     """The review command."""
-    parser = get_parser()
-    opts = parser.parse_args(args=args)
+    parser = argparse.ArgumentParser(prog="review")
+    opts = parser.parse_args(args=args)  # noqa
 
     username, api_id, api_hash = get_user_credentials()
     client = TelegramClient("review", api_id, api_hash)
