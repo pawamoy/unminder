@@ -13,8 +13,13 @@ def test_show_queue_help(capsys):
     assert "queue" in captured.out
 
 
-def test_show_review_help(capsys):
-    """Shows help."""
+def test_show_help(capsys):
+    """
+    Shows help.
+
+    Arguments:
+        capsys: Pytest fixture to capture output.
+    """
     with pytest.raises(SystemExit):
         cli.review(["-h"])
     captured = capsys.readouterr()

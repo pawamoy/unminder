@@ -14,6 +14,7 @@
 import argparse
 import os
 import sys
+from typing import List, Optional
 
 from telethon import TelegramClient
 
@@ -34,11 +35,21 @@ def get_user_credentials():
     return username, api_id, api_hash
 
 
-def queue(args=None):
-    """The queue command."""
-    parser = argparse.ArgumentParser(prog="queue")
+def queue(args: Optional[List[str]] = None) -> int:
+    """
+    Run the queue program.
+
+    This function is executed when you type `queue`.
+
+    Arguments:
+        args: Arguments passed from the command line.
+
+    Returns:
+        An exit code.
+    """
+    parser = get_parser()
     opts = parser.parse_args(args=args)
-    print(opts)
+    print(opts)  # noqa: WPS421 (side-effect in main is fine)
     return 0
 
 
