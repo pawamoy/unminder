@@ -1,5 +1,4 @@
-"""
-Entry-point module, in case you use `python -m unminder`.
+"""Entry-point module, in case you use `python -m unminder`.
 
 Why does this file exist, and why `__main__`? For more info, read:
 
@@ -9,7 +8,7 @@ Why does this file exist, and why `__main__`? For more info, read:
 
 import sys
 
-from unminder.cli import review
+from unminder.cli import main
 
 if __name__ == "__main__":
-    sys.exit(review(sys.argv[1:]))
+    sys.exit(main(sys.argv[1:]))
