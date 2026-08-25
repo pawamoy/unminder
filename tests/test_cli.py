@@ -15,7 +15,7 @@ def test_show_queue_help(capsys):
 
 def test_show_help(capsys):
     """
-    Shows help.
+    Show help.
 
     Arguments:
         capsys: Pytest fixture to capture output.
