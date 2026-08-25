@@ -1,5 +1,5 @@
-# Changes here will be overwritten by Copier
-_commit: 0.1.0
+# Changes here will be overwritten by Copier.
+_commit: 1.13.0
 _src_path: gh:pawamoy/copier-uv
 author_email: dev@pawamoy.fr
 author_fullname: Timothée Mazzucotelli
@@ -7,8 +7,7 @@ author_username: pawamoy
 copyright_date: '2020'
 copyright_holder: Timothée Mazzucotelli
 copyright_holder_email: dev@pawamoy.fr
-copyright_license: ISC License
-insiders: false
+copyright_license: ISC
 project_description: Queue things in a list, review them later.
 project_name: Unminder
 python_package_command_line_name: unminder
@@ -17,3 +16,4 @@ python_package_import_name: unminder
 repository_name: unminder
 repository_namespace: pawamoy
 repository_provider: github.com
+
