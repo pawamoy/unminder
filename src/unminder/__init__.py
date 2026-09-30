@@ -23,6 +23,6 @@ Queue things in a list, review them later.
 
 from __future__ import annotations
 
-from unminder._internal.cli import get_parser, main
+from unminder._internal.cli import get_parser, get_user_credentials, main, review
 
-__all__: list[str] = ["get_parser", "main"]
+__all__: list[str] = ["get_parser", "get_user_credentials", "main", "review"]

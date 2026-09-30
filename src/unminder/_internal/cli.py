@@ -30,6 +30,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from typing import Any
 
@@ -47,8 +48,8 @@ class _DebugInfo(argparse.Action):
         sys.exit(0)
 
 
-def get_user_credentials():
-    """Utility function to get a user's credentials from environment variables."""
+def get_user_credentials() -> tuple[str, int, str]:
+    """Read the Telegram username, API ID, and API hash from environment variables."""
     try:
         username = os.environ["TELEGRAM_USERNAME"]
         api_id = int(os.environ["TELEGRAM_API_ID"])
@@ -63,10 +64,13 @@ def get_user_credentials():
     return username, api_id, api_hash
 
 
-def review(args=None):
-    """The review command."""
+def review(args: list[str] | None = None) -> None:
+    """Print the configured user's Telegram messages in oldest-first order.
+
+    Print the message count before the text of each message.
+    """
     parser = argparse.ArgumentParser(prog="review")
-    opts = parser.parse_args(args=args)  # noqa
+    opts = parser.parse_args(args=args)  # noqa: F841
 
     username, api_id, api_hash = get_user_credentials()
     client = TelegramClient("review", api_id, api_hash)

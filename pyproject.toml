@@ -28,7 +28,9 @@ classifiers = [
     "Topic :: Utilities",
     "Typing :: Typed",
 ]
-dependencies = []
+dependencies = [
+    "telethon>=1.45",
+]
 
 [project.urls]
 Homepage = "https://pawamoy.github.io/unminder"
